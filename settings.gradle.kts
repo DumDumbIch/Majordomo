@@ -20,5 +20,20 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Majordomo"
+// Application
 include(":app")
- 
+// Base
+include(":base:ui")
+// Core
+include(":core:di")
+include(":core:design")
+include(":core:eventbus")
+include(":core:navigation")
+// Feature
+include(":feature:frame")
+include(":feature:splash")
+include(":feature:auth")
+include(":feature:home")
+include(":feature:payment")
+// Tools
+include(":tools:logger")
