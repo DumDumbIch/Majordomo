@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.dumdumbich.core.di"
+    namespace = "ru.dumdumbich.design.compose"
     compileSdk = 34
 
     defaultConfig {
@@ -30,8 +30,7 @@ android {
 }
 
 dependencies {
-    implementation(libs.koin.core)
-    implementation(libs.koin.android)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

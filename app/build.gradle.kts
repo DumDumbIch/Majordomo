@@ -23,17 +23,28 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
 dependencies {
-
+    implementation(project(":core:di"))
+    implementation(project(":base:ui"))
+    implementation(project(":tools:logger"))
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.androidx.startup)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
